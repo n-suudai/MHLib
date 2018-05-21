@@ -1,0 +1,2 @@
+# MHLib
+Mere Hobby Programming
