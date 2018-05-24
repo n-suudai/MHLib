@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{52c3a449-f671-4f0b-b124-8684d1c55352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{b8fc903d-30e5-49f0-99fc-5fe24b36bf8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MH">
+      <UniqueIdentifier>{21132ecd-b0da-4204-9521-f56fc8dda5b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\MH">
+      <UniqueIdentifier>{8c9aeaad-ad02-4bc0-b0af-3c7f1aaeaade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\MH\OS">
+      <UniqueIdentifier>{ab8e323a-8332-4a62-838d-bae25215757c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MH\OS">
+      <UniqueIdentifier>{6faf1669-0cfc-49b9-bc97-a88b20f70023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MH\OS\Win">
+      <UniqueIdentifier>{d0216c78-b933-4d44-a9d8-338f68b06ccc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Include\MH\MH.hpp">
+      <Filter>Include\MH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\OS\Log.hpp">
+      <Filter>Include\MH\OS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Source\MH\MH.cpp">
+      <Filter>Source\MH</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\MH\OS\Win\Log.cpp">
+      <Filter>Source\MH\OS\Win</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
