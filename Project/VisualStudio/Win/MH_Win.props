@@ -5,7 +5,14 @@
     <ClCompile>
       <PreprocessorDefinitions Condition="'$(Configuration)' == 'Debug'">MH_BUILD_DEBUG;_DEBUG;MH_PLATFORM_WIN;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)' == 'Release'">MH_BUILD_RELEASE;NDEBUG;MH_PLATFORM_WIN;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..\Include\;$(SolutionDir)..\..\..\Source\;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+        $(SolutionDir)..\..\..\Include\;
+        $(SolutionDir)..\..\..\Source\;
+        $(SolutionDir)..\..\..\External\cereal\include\;
+        $(SolutionDir)..\..\..\External\Eigen\;
+        $(SolutionDir)..\..\..\External\imgui\;
+        $(SolutionDir)..\..\..\External\LodePNG\;
+      </AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />

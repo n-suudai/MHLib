@@ -22,12 +22,33 @@
     <Filter Include="Source\MH\OS\Win">
       <UniqueIdentifier>{d0216c78-b933-4d44-a9d8-338f68b06ccc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\MH\External">
+      <UniqueIdentifier>{b13a2e93-535b-423d-8cb9-1e66f4f0cd91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\MH\External">
+      <UniqueIdentifier>{926e43fe-835a-4607-b446-b17293de38b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\MH\Geometry">
+      <UniqueIdentifier>{8ecc5432-0dee-4e4f-aec9-75f766a3ef20}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Include\MH\MH.hpp">
       <Filter>Include\MH</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Include\MH\OS\Log.hpp">
+      <Filter>Include\MH\OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\External\External.hpp">
+      <Filter>Include\MH\External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\Geometry\Math.hpp">
+      <Filter>Include\MH\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\External\Eigen.hpp">
+      <Filter>Include\MH\External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\OS\Types.hpp">
       <Filter>Include\MH\OS</Filter>
     </ClInclude>
   </ItemGroup>
@@ -37,6 +58,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Source\MH\OS\Win\Log.cpp">
       <Filter>Source\MH\OS\Win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\MH\External\External.cpp">
+      <Filter>Source\MH\External</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

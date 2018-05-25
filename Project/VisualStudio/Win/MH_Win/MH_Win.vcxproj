@@ -98,7 +98,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -113,7 +113,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -128,7 +128,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -147,7 +147,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -163,10 +163,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Include\MH\External\Eigen.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\External\External.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\Geometry\Math.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\Include\MH\MH.hpp" />
     <ClInclude Include="..\..\..\..\Include\MH\OS\Log.hpp" />
+    <ClInclude Include="..\..\..\..\Include\MH\OS\Types.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Source\MH\External\External.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\Source\MH\MH.cpp" />
     <ClCompile Include="..\..\..\..\Source\MH\OS\Win\Log.cpp" />
   </ItemGroup>

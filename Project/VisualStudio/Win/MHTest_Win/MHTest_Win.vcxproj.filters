@@ -7,10 +7,13 @@
     <Filter Include="Source\MHTest">
       <UniqueIdentifier>{1a35d235-422b-40ed-b0fc-a7d43b2c384a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\MHTest\Win">
+      <UniqueIdentifier>{946c88f9-78ee-421a-9c64-46b21fd2c835}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Source\MHTest\Main.cpp">
-      <Filter>Source\MHTest</Filter>
+    <ClCompile Include="..\..\..\..\Source\MHTest\Win\Main.cpp">
+      <Filter>Source\MHTest\Win</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
