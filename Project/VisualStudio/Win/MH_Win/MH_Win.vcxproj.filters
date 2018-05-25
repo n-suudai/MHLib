@@ -51,6 +51,15 @@
     <ClInclude Include="..\..\..\..\Include\MH\OS\Types.hpp">
       <Filter>Include\MH\OS</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\Result.hpp">
+      <Filter>Include\MH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\KeyCode.hpp">
+      <Filter>Include\MH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\Utility.hpp">
+      <Filter>Include\MH</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Source\MH\MH.cpp">

@@ -15,5 +15,16 @@
     <ClCompile Include="..\..\..\..\Source\MHTest\Win\Main.cpp">
       <Filter>Source\MHTest\Win</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\MHTest\Win\Window.cpp">
+      <Filter>Source\MHTest\Win</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Source\MHTest\Win\Window.hpp">
+      <Filter>Source\MHTest\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MHTest\Win\Windows.hpp">
+      <Filter>Source\MHTest\Win</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
