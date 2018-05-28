@@ -11,3 +11,8 @@
 // LodePNG
 #include "lodepng.cpp"
 
+
+// fmt
+#include "format.cc"
+#include "posix.cc"
+

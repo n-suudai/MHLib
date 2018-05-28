@@ -16,4 +16,6 @@
 
 #include <tchar.h>
 #include <Windows.h>
+#include <WinUser.h>
+#include <windowsx.h>
 

@@ -60,6 +60,9 @@
     <ClInclude Include="..\..\..\..\Include\MH\Utility.hpp">
       <Filter>Include\MH</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\External\fmt.hpp">
+      <Filter>Include\MH\External</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Source\MH\MH.cpp">
@@ -70,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Source\MH\External\External.cpp">
       <Filter>Source\MH\External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\MH\KeyCode.cpp">
+      <Filter>Source\MH</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

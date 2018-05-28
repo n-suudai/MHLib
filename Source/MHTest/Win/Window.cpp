@@ -372,10 +372,11 @@ LRESULT CALLBACK Window::WindowProcedureInstance(HWND hWnd, UINT uMsg, WPARAM wP
         if (m_Callbacks.pOnMouseWheel != nullptr)
         {
             Position2D position = {
-                static_cast<s32>((int16_t)LOWORD(lParam)),
-                static_cast<s32>((int16_t)HIWORD(lParam))
+                static_cast<s32>(GET_X_LPARAM(lParam)),
+                static_cast<s32>(GET_Y_LPARAM(lParam))
             };
-            s32 wheelDelta = static_cast<s32>((int16_t)wParam);
+            s32 wheelDelta = static_cast<s32>(GET_WHEEL_DELTA_WPARAM(wParam));
+            wheelDelta /= WHEEL_DELTA;
 
             m_Callbacks.pOnMouseWheel(
                 position,

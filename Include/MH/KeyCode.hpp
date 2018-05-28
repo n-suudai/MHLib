@@ -2,6 +2,12 @@
 #pragma once
 
 
+#include <string>
+
+
+namespace MH {
+
+
 enum KEY_CODE
 {
     KEY_CODE_UNKNOWN
@@ -83,4 +89,11 @@ enum MOUSE_BUTTON
     , MOUSE_BUTTON_RIGHT
     , MOUSE_BUTTON_MIDDLE
 };
+
+
+std::string KeyCodeToString(KEY_CODE key);
+std::string MouseButtonToString(MOUSE_BUTTON mouse);
+
+
+} // namespace MH
 
