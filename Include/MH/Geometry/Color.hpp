@@ -17,6 +17,11 @@ public:
         : Vector4()
     {}
 
+    inline Color(Scalar v)
+    {
+        (*this) << v, v, v, v;
+    }
+
     inline Color(Scalar r, Scalar g, Scalar b, Scalar a = Scalar(1))
     {
         (*this) << r, g, b, a;
@@ -60,11 +65,11 @@ public:
             );
     }
 
-    inline Color ToHSVColor(const Color& rgbColor)
+    inline static Color ToHSVColor(const Color& rgbColor)
     {
         Color hsv = rgbColor;
-        Scalar min = Min(Min(rgbColor.r, rgbColor.g), rgbColor.b);
-        Scalar max = Max(Max(rgbColor.r, rgbColor.g), rgbColor.b);
+        Scalar min = Min(Min(rgbColor.r(), rgbColor.g()), rgbColor.b());
+        Scalar max = Max(Max(rgbColor.r(), rgbColor.g()), rgbColor.b());
         Scalar Delta = max - min;
 
         hsv.v() = max;
@@ -99,12 +104,12 @@ public:
         return hsv;
     }
 
-    inline Color ToRGBColor(const Color& hsvColor)
+    inline static Color ToRGBColor(const Color& hsvColor)
     {
         Color hsv = hsvColor;
         Color rgbColor;
 
-        if (hsv.y == static_cast<Scalar>(0))
+        if (hsv.y() == static_cast<Scalar>(0))
         {
             // achromatic (grey)
             rgbColor = Color(hsv.v());

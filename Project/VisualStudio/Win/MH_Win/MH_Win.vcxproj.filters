@@ -63,6 +63,9 @@
     <ClInclude Include="..\..\..\..\Include\MH\External\fmt.hpp">
       <Filter>Include\MH\External</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\Geometry\Color.hpp">
+      <Filter>Include\MH\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Source\MH\MH.cpp">
