@@ -1,4 +1,4 @@
-﻿
+
 #pragma once
 
 
@@ -6,12 +6,12 @@
 
 
 #if defined(MH_BUILD_DEBUG)
-#   define MH_LOGV(format, ...) MH::OS::Log::Verbose(format, __VA_ARGS__)
-#   define MH_LOGD(format, ...) MH::OS::Log::Debug(format, __VA_ARGS__)
-#   define MH_LOGI(format, ...) MH::OS::Log::Info(format, __VA_ARGS__)
-#   define MH_LOGW(format, ...) MH::OS::Log::Warning(format, __VA_ARGS__)
-#   define MH_LOGE(format, ...) MH::OS::Log::Error(format, __VA_ARGS__)
-#   define MH_LOGA(format, ...) MH::OS::Log::Assert(format, __VA_ARGS__)
+#   define MH_LOGV(format, ...) MH::OS::Log::Verbose(format, ##__VA_ARGS__)
+#   define MH_LOGD(format, ...) MH::OS::Log::Debug(format, ##__VA_ARGS__)
+#   define MH_LOGI(format, ...) MH::OS::Log::Info(format, ##__VA_ARGS__)
+#   define MH_LOGW(format, ...) MH::OS::Log::Warning(format, ##__VA_ARGS__)
+#   define MH_LOGE(format, ...) MH::OS::Log::Error(format, ##__VA_ARGS__)
+#   define MH_LOGA(format, ...) MH::OS::Log::Assert(format, ##__VA_ARGS__)
 #else
 #   define MH_LOGV(format, ...)
 #   define MH_LOGD(format, ...)

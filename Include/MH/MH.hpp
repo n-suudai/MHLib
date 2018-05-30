@@ -1,4 +1,4 @@
-﻿
+
 #pragma once
 
 
@@ -8,7 +8,9 @@
 #include <memory>
 
 
-#define MH_UNUSED(x) (x)
+#if !defined(MH_UNUSED)
+#    define MH_UNUSED(x) static_cast<void>(x)
+#endif
 
 
 namespace MH {
@@ -36,11 +38,14 @@ public:
     virtual void OnUpdate(f64 deltaTime);
 
     virtual void OnRender();
+    
+    virtual bool IsAlive() const { return m_isAlive; }
 
 protected:
     WindowHandle    m_windowHandle;
     u32             m_width;
     u32             m_height;
+    bool            m_isAlive;
 };
 
 
@@ -48,5 +53,4 @@ protected:
 
 
 std::unique_ptr<MH::Application> MHCreateApplication();
-void MHDestroyWindow(MH::WindowHandle windowHandle);
 

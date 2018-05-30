@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF7450EB20BE423600D6F0F6 /* MetalViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF7450EA20BE423600D6F0F6 /* MetalViewController.mm */; };
 		BF7A56FD20B6ACCF005E3008 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7A56FC20B6ACCF005E3008 /* AppDelegate.m */; };
 		BF7A56FF20B6ACD1005E3008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7A56FE20B6ACD1005E3008 /* Assets.xcassets */; };
 		BF7A570220B6ACD1005E3008 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7A570020B6ACD1005E3008 /* MainMenu.xib */; };
@@ -54,6 +55,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF7450E920BE423600D6F0F6 /* MetalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalViewController.h; sourceTree = "<group>"; };
+		BF7450EA20BE423600D6F0F6 /* MetalViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = MetalViewController.mm; sourceTree = "<group>"; };
 		BF7A56F820B6ACCF005E3008 /* MHTest_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHTest_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7A56FB20B6ACCF005E3008 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF7A56FC20B6ACCF005E3008 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +80,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF7450CC20BE35A500D6F0F6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BF7450D720BE35A500D6F0F6 /* MHTest */,
+			);
+			name = Source;
+			path = ../../../../../Source;
+			sourceTree = "<group>";
+		};
+		BF7450D720BE35A500D6F0F6 /* MHTest */ = {
+			isa = PBXGroup;
+			children = (
+				BF7450E420BE35CF00D6F0F6 /* macOS */,
+			);
+			path = MHTest;
+			sourceTree = "<group>";
+		};
+		BF7450E420BE35CF00D6F0F6 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				BF7A56FB20B6ACCF005E3008 /* AppDelegate.h */,
+				BF7A56FC20B6ACCF005E3008 /* AppDelegate.m */,
+				BF7A570420B6ACD1005E3008 /* main.mm */,
+				BF7450E920BE423600D6F0F6 /* MetalViewController.h */,
+				BF7450EA20BE423600D6F0F6 /* MetalViewController.mm */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
 		BF7A56EF20B6ACCE005E3008 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +129,10 @@
 		BF7A56FA20B6ACCF005E3008 /* MHTest_macOS */ = {
 			isa = PBXGroup;
 			children = (
-				BF7A56FB20B6ACCF005E3008 /* AppDelegate.h */,
-				BF7A56FC20B6ACCF005E3008 /* AppDelegate.m */,
+				BF7450CC20BE35A500D6F0F6 /* Source */,
 				BF7A56FE20B6ACD1005E3008 /* Assets.xcassets */,
 				BF7A570020B6ACD1005E3008 /* MainMenu.xib */,
 				BF7A570320B6ACD1005E3008 /* Info.plist */,
-				BF7A570420B6ACD1005E3008 /* main.mm */,
 				BF7A570620B6ACD1005E3008 /* MHTest_macOS.entitlements */,
 			);
 			path = MHTest_macOS;
@@ -211,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7450EB20BE423600D6F0F6 /* MetalViewController.mm in Sources */,
 				BF7A570520B6ACD1005E3008 /* main.mm in Sources */,
 				BF7A56FD20B6ACCF005E3008 /* AppDelegate.m in Sources */,
 			);
@@ -354,9 +385,21 @@
 				CODE_SIGN_ENTITLEMENTS = MHTest_macOS/MHTest_macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					_DEBUG,
+					MH_BUILD_DEBUG,
+					MH_PLATFORM_MACOS,
+					"_ITERATOR_DEBUG_LEVEL=0",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../Include",
 					"$(SRCROOT)/../../../../Source",
+					"$(SRCROOT)/../../../../External/Eigen",
+					"$(SRCROOT)/../../../../External/fmt/include",
+					"$(SRCROOT)/../../../../External/cereal/include",
+					"$(SRCROOT)/../../../../External/imgui",
+					"$(SRCROOT)/../../../../External/LodePNG",
 				);
 				INFOPLIST_FILE = MHTest_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -375,9 +418,20 @@
 				CODE_SIGN_ENTITLEMENTS = MHTest_macOS/MHTest_macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					MH_BUILD_RELEASE,
+					MH_PLATFORM_MACOS,
+					"_ITERATOR_DEBUG_LEVEL=0",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../Include",
 					"$(SRCROOT)/../../../../Source",
+					"$(SRCROOT)/../../../../External/Eigen",
+					"$(SRCROOT)/../../../../External/fmt/include",
+					"$(SRCROOT)/../../../../External/cereal/include",
+					"$(SRCROOT)/../../../../External/imgui",
+					"$(SRCROOT)/../../../../External/LodePNG",
 				);
 				INFOPLIST_FILE = MHTest_macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

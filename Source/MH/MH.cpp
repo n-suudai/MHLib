@@ -1,4 +1,4 @@
-﻿
+
 #include "MH/MH.hpp"
 #include "MH/OS/Log.hpp"
 
@@ -8,6 +8,9 @@ namespace MH {
 
 Application::Application()
     : m_windowHandle(nullptr)
+    , m_width(0)
+    , m_height(0)
+    , m_isAlive(true)
 {
 
 }
@@ -51,7 +54,7 @@ void Application::OnKey(KEY_CODE key, bool isDown)
 
     if (isDown && key == KEY_CODE_ESCAPE)
     {
-        MHDestroyWindow(m_windowHandle);
+        m_isAlive = false;
     }
 }
 

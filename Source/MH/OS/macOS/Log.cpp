@@ -9,7 +9,7 @@ namespace OS {
 namespace Log {
 
 
-void Log(Level level, const char* pMessage)
+void PlatformLog(Level level, const char* pMessage)
 {
     std::stringstream ss;
     
