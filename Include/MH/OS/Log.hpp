@@ -38,91 +38,55 @@ enum class Level
 };
 
 
-void Log(Level level, const char* pMessage);
+void PlatformLog(Level level, const char* pMessage);
 
 template<class ... Args>
 inline void Log(Level level, const char* pFormat, const Args& ... args)
 {
     std::string message = fmt::format(pFormat, args ...);
-    Log(level, message.c_str());
-}
-
-
-inline void Verbose(const char* pMessage)
-{
-    Log(Level::Verbose, pMessage);
+    PlatformLog(level, message.c_str());
 }
 
 template<class ... Args>
 inline void Verbose(const char* pFormat, const Args& ... args)
 {
     std::string message = fmt::format(pFormat, args ...);
-    Log(Level::Verbose, message.c_str());
-}
-
-
-inline void Debug(const char* pMessage)
-{
-    Log(Level::Debug, pMessage);
+    PlatformLog(Level::Verbose, message.c_str());
 }
 
 template<class ... Args>
 inline void Debug(const char* pFormat, const Args& ... args)
 {
     std::string message = fmt::format(pFormat, args ...);
-    Log(Level::Debug, message.c_str());
-}
-
-
-inline void Info(const char* pMessage)
-{
-    Log(Level::Info, pMessage);
+    PlatformLog(Level::Debug, message.c_str());
 }
 
 template<class ... Args>
 inline void Info(const char* pFormat, const Args& ... args)
 {
     std::string message = fmt::format(pFormat, args ...);
-    Log(Level::Info, message.c_str());
-}
-
-
-inline void Warning(const char* pMessage)
-{
-    Log(Level::Warning, pMessage);
+    PlatformLog(Level::Info, message.c_str());
 }
 
 template<class ... Args>
 inline void Warning(const char* pFormat, const Args& ... args)
 {
     std::string message = fmt::format(pFormat, args ...);
-    Log(Level::Warning, message.c_str());
-}
-
-
-inline void Error(const char* pMessage)
-{
-    Log(Level::Error, pMessage);
+    PlatformLog(Level::Warning, message.c_str());
 }
 
 template<class ... Args>
 inline void Error(const char* pFormat, const Args& ... args)
 {
     std::string message = fmt::format(pFormat, args ...);
-    Log(Level::Error, message.c_str());
-}
-
-
-inline void Assert(const char* pMessage)
-{
-    Log(Level::Assert, pMessage);
+    PlatformLog(Level::Error, message.c_str());
 }
 
 template<class ... Args>
 inline void Assert(const char* pFormat, const Args& ... args)
 {
     std::string message = fmt::format(pFormat, args ...);
-    Log(Level::Assert, message.c_str());
+    PlatformLog(Level::Assert, message.c_str());
 }
 
 
