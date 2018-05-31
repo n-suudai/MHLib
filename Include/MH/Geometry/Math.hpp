@@ -4,6 +4,7 @@
 
 #include "MH/External/Eigen.hpp"
 #include "MH/OS/Types.hpp"
+#include "MH/OS/Assert.hpp"
 
 
 namespace MH {
@@ -111,8 +112,8 @@ inline f32 Sin(f32 x)
 
 inline void SinCos(f32* pSin, f32* pCos, f32 value)
 {
-    assert(pSin);
-    assert(pCos);
+    MH_ASSERT(pSin);
+    MH_ASSERT(pCos);
 
     // Map Value to y in [-pi,pi], x = 2*pi*quotient + remainder.
     f32 quotient = DIV_PI2 * value;
@@ -265,9 +266,9 @@ inline Matrix4x4& FrustumRH(Matrix4x4& mat, f32 left, f32 right, f32 bottom, f32
 
 inline Matrix4x4& PerspectiveFovLH(Matrix4x4& mat, f32 fov, f32 width, f32 height, f32 zNear, f32 zFar)
 {
-    assert(width > 0.0f);
-    assert(height > 0.0f);
-    assert(fov > 0.0f);
+    MH_ASSERT(width > 0.0f);
+    MH_ASSERT(height > 0.0f);
+    MH_ASSERT(fov > 0.0f);
 
     f32 s, c;
     SinCos(&s, &c, 0.5f * fov);
@@ -286,9 +287,9 @@ inline Matrix4x4& PerspectiveFovLH(Matrix4x4& mat, f32 fov, f32 width, f32 heigh
 
 inline Matrix4x4& PerspectiveFovRH(Matrix4x4& mat, f32 fov, f32 width, f32 height, f32 zNear, f32 zFar)
 {
-    assert(width > 0.0f);
-    assert(height > 0.0f);
-    assert(fov > 0.0f);
+    MH_ASSERT(width > 0.0f);
+    MH_ASSERT(height > 0.0f);
+    MH_ASSERT(fov > 0.0f);
 
     f32 s, c;
     SinCos(&s, &c, 0.5f * fov);

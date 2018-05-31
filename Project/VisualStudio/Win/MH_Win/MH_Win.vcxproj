@@ -185,6 +185,10 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\Include\MH\KeyCode.hpp" />
     <ClInclude Include="..\..\..\..\Include\MH\MH.hpp" />
+    <ClInclude Include="..\..\..\..\Include\MH\OS\Assert.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\Include\MH\OS\Log.hpp" />
     <ClInclude Include="..\..\..\..\Include\MH\OS\Types.hpp">
       <SubType>
