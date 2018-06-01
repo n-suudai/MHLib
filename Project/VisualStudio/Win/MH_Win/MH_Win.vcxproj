@@ -183,6 +183,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\Graphics.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\Include\MH\KeyCode.hpp" />
     <ClInclude Include="..\..\..\..\Include\MH\MH.hpp" />
     <ClInclude Include="..\..\..\..\Include\MH\OS\Assert.hpp">
@@ -202,9 +206,33 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MH\Graphics\D3D11\D3D11.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MH\Graphics\D3D11\D3D11Result.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MH\Graphics\D3D11\D3D11Utility.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MH\Graphics\D3D11\Device.hpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Source\MH\External\External.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\MH\Graphics\D3D11\D3D11Utility.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\MH\Graphics\D3D11\Device.cpp">
       <SubType>
       </SubType>
     </ClCompile>

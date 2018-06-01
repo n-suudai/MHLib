@@ -28,7 +28,7 @@ Result Application::Initialize(WindowHandle windowHandle, u32 width, u32 height)
     m_width = width;
     m_height = height;
 
-    return Result(true);
+    return MH_MAKE_RESULT(true);
 }
 
 Result Application::Finalize()

@@ -110,9 +110,10 @@ Window::~Window()
 Result Window::Initialize(Size2D const& clientSize, std::string const& title)
 {
     m_hInstance = GetModuleHandleA(nullptr);
+
     if (!m_hInstance)
     {
-        return Result(false, "GetModuleHandleA is failed");
+        return MH_MAKE_RESULT(false, "GetModuleHandleA is failed");
     }
 
     m_ClientSize = clientSize;
@@ -134,7 +135,7 @@ Result Window::Initialize(Size2D const& clientSize, std::string const& title)
 
     if (!RegisterClassExA(&wc))
     {
-        return Result(false, "RegisterClassExA is failed");
+        return MH_MAKE_RESULT(false, "RegisterClassExA is failed");
     }
 
     // 矩形の設定
@@ -168,7 +169,7 @@ Result Window::Initialize(Size2D const& clientSize, std::string const& title)
     );
     if (!m_hWnd)
     {
-        return Result(false, "CreateWindowA is failed");
+        return MH_MAKE_RESULT(false, "CreateWindowA is failed");
     }
 
     // ウィンドウを表示
@@ -180,7 +181,7 @@ Result Window::Initialize(Size2D const& clientSize, std::string const& title)
 
     SetWindowLongPtrA(m_hWnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(this));
 
-    return Result(true);
+    return MH_MAKE_RESULT(true);
 }
 
 

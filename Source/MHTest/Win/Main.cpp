@@ -13,15 +13,54 @@
 
 
 #include "MH/MH.hpp"
+#include "MH/Graphics.hpp"
 #include "Window.hpp"
 
 
 using namespace MH;
 
 
+#pragma comment(lib, "dxgi.lib")
+#pragma comment(lib, "d3d11.lib")
+#pragma comment(lib, "D3DCompiler.lib")
+#pragma comment(lib, "dxguid.lib")
+
+
+class ApplicationTest : public Application
+{
+public:
+    typedef Application Super;
+
+    Result Initialize(WindowHandle windowHandle, u32 width, u32 height) override
+    {
+        Result result = Super::Initialize(windowHandle, width, height);
+
+        if (!result) { return result; }
+
+        Graphics::DeviceDesc deviceDesc;
+        deviceDesc.enableDebug = true;
+
+        result = Graphics::CreateDevice(
+            m_device,
+            deviceDesc
+        );
+
+        return result;
+    }
+
+    Result Finalize() override
+    {
+        return Super::Finalize();
+    }
+
+private:
+    std::unique_ptr<Graphics::IDevice> m_device;
+};
+
+
 std::unique_ptr<MH::Application> MHCreateApplication()
 {
-    return std::make_unique<MH::Application>();
+    return std::make_unique<ApplicationTest>();
 }
 
 
@@ -96,13 +135,18 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
     std::unique_ptr<Window> window = std::make_unique<Window>();
 
     Result result = window->Initialize(clientSize, "MHTest");
-    if (result.IsFailed())
+    if (!result)
     {
         return 0;
     }
 
     std::unique_ptr<Application> application = MHCreateApplication();
-    application->Initialize(window->GetWindowHandle(), 640, 480);
+    result = application->Initialize(window->GetWindowHandle(), 640, 480);
+
+    if (!result)
+    {
+        return 0;
+    }
 
     // コールバックの設定
     {
@@ -131,9 +175,16 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
     while (window->IsLoop())
     {
-        application->OnUpdate(0.0);
-        application->OnRender();
-        window->Sleep(16);
+        if (application->IsAlive())
+        {
+            application->OnUpdate(0.0);
+            application->OnRender();
+            window->Sleep(16);
+        }
+        else
+        {
+            window->PostQuit();
+        }
     }
 
     return 0;

@@ -31,6 +31,12 @@
     <Filter Include="Include\MH\Geometry">
       <UniqueIdentifier>{8ecc5432-0dee-4e4f-aec9-75f766a3ef20}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\MH\Graphics">
+      <UniqueIdentifier>{06b54e66-b34f-432a-95f8-df87b97cf83c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MH\Graphics\D3D11">
+      <UniqueIdentifier>{7182ee72-ba36-4413-a075-c02f18eacc43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Include\MH\MH.hpp">
@@ -69,6 +75,21 @@
     <ClInclude Include="..\..\..\..\Include\MH\OS\Assert.hpp">
       <Filter>Include\MH\OS</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\MH\Graphics.hpp">
+      <Filter>Include\MH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MH\Graphics\D3D11\Device.hpp">
+      <Filter>Source\MH\Graphics\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MH\Graphics\D3D11\D3D11Utility.hpp">
+      <Filter>Source\MH\Graphics\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MH\Graphics\D3D11\D3D11.hpp">
+      <Filter>Source\MH\Graphics\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\MH\Graphics\D3D11\D3D11Result.hpp">
+      <Filter>Source\MH\Graphics\D3D11</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Source\MH\MH.cpp">
@@ -82,6 +103,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Source\MH\KeyCode.cpp">
       <Filter>Source\MH</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\MH\Graphics\D3D11\D3D11Utility.cpp">
+      <Filter>Source\MH\Graphics\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\MH\Graphics\D3D11\Device.cpp">
+      <Filter>Source\MH\Graphics\D3D11</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
